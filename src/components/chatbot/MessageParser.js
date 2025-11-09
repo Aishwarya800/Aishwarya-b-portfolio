@@ -6,9 +6,9 @@ class MessageParser {
   parse(message) {
     const lower = message.toLowerCase();
 
-    if (lower.includes("hello") || lower.includes("hi")) {
+    if (lower.includes("hi") || lower.includes("hello")) {
       this.actionProvider.greet();
-    } else if (lower.includes("about") || lower.includes("yourself")) {
+    } else if (lower.includes("about")) {
       this.actionProvider.about();
     } else if (lower.includes("skill")) {
       this.actionProvider.skills();

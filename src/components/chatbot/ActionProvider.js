@@ -1,54 +1,47 @@
 class ActionProvider {
-  constructor(createChatBotMessage, setStateFunc) {
-    this.createChatBotMessage = createChatBotMessage;
-    this.setState = setStateFunc;
+  constructor(setMessages) {
+    this.setMessages = setMessages;
   }
 
-  updateChatbotState(message) {
-    this.setState((prevState) => ({
-      ...prevState,
-      messages: [...prevState.messages, message],
-    }));
+  sendMessage(message) {
+    this.setMessages((prev) => [
+      ...prev,
+      { sender: "bot", text: message },
+    ]);
   }
 
   greet() {
-    const message = this.createChatBotMessage("Hi there! 👋 How can I help you?");
-    this.updateChatbotState(message);
+    this.sendMessage("Hi there! 👋 How can I help you?");
   }
 
   about() {
-    const message = this.createChatBotMessage(
+    this.sendMessage(
       "I'm Aishwarya B, a Computer Science Engineering student passionate about web development and AI projects. 🚀"
     );
-    this.updateChatbotState(message);
   }
 
   skills() {
-    const message = this.createChatBotMessage(
-      "My main skills include: HTML, CSS, JavaScript, React, Node.js, Express, SQL, and Python 🧠"
+    this.sendMessage(
+      "My main skills include HTML, CSS, JavaScript, React, Node.js, Express, SQL, and Python 🧠"
     );
-    this.updateChatbotState(message);
   }
 
   projects() {
-    const message = this.createChatBotMessage(
-      "Here are some of my projects:\n\n• 🌦️ WEATHER-BACKENDS – Full-stack weather app using React & Express.\n• 🦾 Gesture-Controlled Prosthetic Arm – Arduino & Tinkercad project.\n• 💬 BreatheTalk – AI voice generator from breathing patterns."
+    this.sendMessage(
+      "Here are some of my projects:\n• 🌦️ Weather App – Full-stack React & Express\n• 🦾 Prosthetic Arm (Arduino)\n• 💬 BreatheTalk – AI Voice from Breathing Patterns"
     );
-    this.updateChatbotState(message);
   }
 
   contact() {
-    const message = this.createChatBotMessage(
-      "📩 You can reach me at: aishwarya@example.com\n🔗 LinkedIn: linkedin.com/in/aishwarya"
+    this.sendMessage(
+      "📩 Reach me at: aishwarya@example.com\n🔗 LinkedIn: linkedin.com/in/aishwarya"
     );
-    this.updateChatbotState(message);
   }
 
   unknown() {
-    const message = this.createChatBotMessage(
+    this.sendMessage(
       "I'm not sure about that 🤔 — try asking about skills, projects, or contact info!"
     );
-    this.updateChatbotState(message);
   }
 }
 

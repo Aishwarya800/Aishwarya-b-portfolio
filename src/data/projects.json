@@ -5,8 +5,8 @@
     "imageSrc": "projects/project.png",
     "description": "A personal portfolio built with React showcasing my projects and skills.",
     "skills": ["React", "CSS", "JavaScript"],
-    "github": "https://github.com/Aishwarya800/Owl-M-A-Material-Design-Study-App",
-    "demo": "https://portfolio-demo.vercel.app"
+    "github": "https://github.com/Aishwarya800/Aishwarya-b-portfolio",
+    "demo": "https://aishwarya-b-portfolio.vercel.app/"
   },
   {
     "title": "MERN Stack App",
