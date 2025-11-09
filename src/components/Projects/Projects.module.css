@@ -1,0 +1,111 @@
+@import "../../vars.css";
+
+.container {
+  margin-top: 76px;
+  color: #fff;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #000, #111);
+  padding: 60px 30px;
+  border-radius: 25px;
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.1);
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* Category Buttons */
+.categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.categoryBtn {
+  padding: 10px 24px;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.categoryBtn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.active {
+  background: #fff;
+  color: #000;
+}
+
+/* Project Cards Layout */
+.projects {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 25px;
+  width: 100%;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  justify-content: flex-start;
+  scrollbar-width: thin;
+}
+
+/* Scrollbar Styling */
+.projects::-webkit-scrollbar {
+  height: 8px;
+}
+.projects::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .projects {
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .projects > * {
+    scroll-snap-align: start;
+  }
+
+  .categoryBtn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .projects {
+    gap: 15px;
+  }
+}

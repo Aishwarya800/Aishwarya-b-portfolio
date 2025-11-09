@@ -1,0 +1,38 @@
+[
+  {
+    "title": "HTML",
+    "level": 95,
+    "imageSrc": "icons/html.png",
+    "certificate": "certificates/htmlcert.jpg"
+  },
+  {
+    "title": "CSS",
+    "level": 90,
+    "imageSrc": "icons/css.png",
+    "certificate": "certificates/csscert.jpg"
+  },
+  {
+    "title": "JavaScript",
+    "level": 85,
+    "imageSrc": "icons/javascript.png",
+    "certificate": "certificates/jscert.jpg"
+  },
+  {
+    "title": "React",
+    "level": 88,
+    "imageSrc": "icons/react.png",
+    "certificate": "certificates/reactcert.jpg"
+  },
+  {
+    "title": "GitHub",
+    "level": 80,
+    "imageSrc": "icons/github.png",
+    "certificate": "certificates/githubcert.jpg"
+  },
+  {
+    "title": "MongoDB",
+    "level": 82,
+    "imageSrc": "icons/mongodb.png",
+    "certificate": "certificates/mongocert.jpg"
+  }
+]

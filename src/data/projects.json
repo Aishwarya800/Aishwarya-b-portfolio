@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Portfolio Website",
+    "category": "Frontend",
+    "imageSrc": "projects/project.png",
+    "description": "A personal portfolio built with React showcasing my projects and skills.",
+    "skills": ["React", "CSS", "JavaScript"],
+    "github": "https://github.com/Aishwarya800/Owl-M-A-Material-Design-Study-App",
+    "demo": "https://portfolio-demo.vercel.app"
+  },
+  {
+    "title": "MERN Stack App",
+    "category": "Full Stack",
+    "imageSrc": "projects/project.png",
+    "description": "A full stack web application built with MongoDB, Express, React, and Node.",
+    "skills": ["MongoDB", "Express", "React", "Node.js"],
+    "github": "https://github.com/Aishwarya800/Owl-M-A-Material-Design-Study-App",
+    "demo": "https://mern-app.vercel.app"
+  },
+  {
+    "title": "Internship at CodezCart",
+    "category": "Internship",
+    "imageSrc": "projects/project.png",
+    "description": "Developed eCommerce modules and implemented React components during internship.",
+    "skills": ["React", "API Integration"],
+    "github": "https://github.com/Aishwarya800/Owl-M-A-Material-Design-Study-App",
+    "demo": "https://codezcart-intern.vercel.app"
+  }
+]

@@ -1,0 +1,235 @@
+.resume-section {
+  background: linear-gradient(to bottom right, #ffff, #fff);
+  padding: 80px 10%;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  text-align: center;
+}
+
+.resume-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.resume-subtitle {
+  font-size: 1.1rem;
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 60px;
+}
+
+.resume-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.column {
+  flex: 1;
+  min-width: 320px;
+  max-width: 480px;
+  text-align: left;
+}
+
+.column-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0000;
+  border-bottom: 2px solid #0000;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin-left: 25px;
+  border-left: 2px solid #000;
+  padding-left: 25px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -34px;
+  top: 8px;
+  width: 14px;
+  height: 14px;
+  background: #111;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.timeline-header h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  
+}
+
+.subtitle {
+  color: #2d2a2a9a;
+  font-size: 0.9rem;
+  margin: 3px 0;
+}
+
+.year {
+  color: #2d2a2a9a;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  background: #111;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.toggle-btn:hover {
+  background: #ffffff;
+  color: #000;
+}
+
+/* Expanded Details */
+.details {
+  background: #1a1a1a;
+  margin-top: 10px;
+  padding: 15px 18px;
+  border-left: 4px solid #ffffff;
+  border-radius: 6px;
+  color: #eaeaea;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Certificate Button */
+.certificate-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: #ffffff;
+  color: #000000;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.certificate-btn:hover {
+  background: #e5e5e5;
+  transform: translateY(-2px);
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  position: relative;
+  background: #111;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: hidden;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 10px;
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: #ffffff;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #e5e5e5;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .resume-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .column {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .timeline {
+    margin-left: 20px;
+  }
+
+  .timeline-item::before {
+    left: -30px;
+  }
+}

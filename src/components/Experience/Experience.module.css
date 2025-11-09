@@ -1,0 +1,146 @@
+.container {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(180deg, #ffffff, #f5f9ff);
+}
+
+.title {
+  font-size: 2rem;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.sliderWrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.sliderTrack {
+  display: flex;
+  gap: 40px;
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
+
+.skill {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.skill:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+  font-size: 64px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.skillHeader p {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1e293b;
+}
+
+.progressBar {
+  background: #e5e7eb;
+  border-radius: 10px;
+  height: 10px;
+  margin: 10px 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  border-radius: 10px;
+  transition: width 0.4s ease-out;
+}
+
+.percentLabel {
+  font-size: 0.9rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.viewCertBtn {
+  margin-top: 12px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.viewCertBtn:hover {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  transform: scale(1.05);
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 20px;
+  overflow: auto;
+}
+
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+}
+
+.modalContent img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.closeBtn:hover {
+  background: #dc2626;
+}

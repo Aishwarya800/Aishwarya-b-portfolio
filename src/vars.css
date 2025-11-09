@@ -1,0 +1,14 @@
+:root {
+  /* Color Theme: White–Black–Red */
+  --color-text: #000000;        /* Black text */
+  --color-primary:#fff;    /* Vibrant red (Netflix-like red) */
+  --color-secondary: #ffffff;   /* White secondary */
+  --color-dark: #111111;        /* Deep black for dark sections */
+  --color-bg: #ffffff;          /* White background */
+
+  /* Fonts */
+  --font-roboto: "Roboto", sans-serif;
+}
+
+
+  
