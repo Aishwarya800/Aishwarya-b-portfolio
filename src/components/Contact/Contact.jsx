@@ -31,7 +31,7 @@ export const Contact = () => {
     <section id="contact" className={styles.contactSection}>
       <h2 className={styles.title}>Contact Me</h2>
       <p className={styles.subtitle}>
-        LET’S <span>Talk About Ideas</span>
+        LET’S <span>We Connect</span>
       </p>
 
       <div className={styles.container}>
