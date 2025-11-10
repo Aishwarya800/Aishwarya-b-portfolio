@@ -16,7 +16,6 @@
   letter-spacing: 1px;
 }
 
-/* ✅ Proper layout for large screens */
 .content {
   display: flex;
   align-items: center;
@@ -25,7 +24,6 @@
   flex-wrap: wrap;
 }
 
-/* ✅ Center image and make circular */
 .imageWrapper {
   flex: 1;
   display: flex;
@@ -47,7 +45,6 @@
   transform: scale(1.05);
 }
 
-/* ✅ Text layout */
 .aboutText {
   flex: 1.2;
   min-width: 300px;
@@ -61,7 +58,6 @@
   margin-bottom: 1.4rem;
 }
 
-/* ✅ Feature box */
 .feature {
   text-align: center;
   animation: fadeIn 0.5s ease-in-out;
@@ -98,7 +94,38 @@
   box-shadow: 0 0 10px #fff;
 }
 
-/* ✅ Responsive mobile fixes */
+/* ✅ Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.fadeOut {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+/* ✅ Responsive styles */
 @media (max-width: 1024px) {
   .container {
     margin: 4rem 5%;
@@ -133,7 +160,6 @@
   }
 }
 
-/* ✅ Extra small phones (like Redmi 13C) */
 @media (max-width: 480px) {
   .title {
     font-size: 2rem;
