@@ -1,5 +1,5 @@
 .resume-section {
-  background: linear-gradient(to bottom right, #ffff, #fff);
+  background: linear-gradient(to bottom right, #fff, #fff);
   padding: 80px 10%;
   font-family: "Poppins", sans-serif;
   color: #000;
@@ -35,19 +35,12 @@
   text-align: left;
 }
 
-.column-title {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #0000;
-  border-bottom: 2px solid #0000;
-  padding-bottom: 10px;
-  margin-bottom: 25px;
-}
-
-/* Timeline */
+/* =========================
+   ✅ TIMELINE FIXED SECTION
+   ========================= */
 .timeline {
   position: relative;
-  margin-left: 25px;
+  margin-left: 20px;
   border-left: 2px solid #000;
   padding-left: 25px;
 }
@@ -60,13 +53,14 @@
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: -34px;
-  top: 8px;
+  left: -8px; /* Center dot perfectly on the line */
+  top: 0.55em;
   width: 14px;
   height: 14px;
   background: #111;
-  border: 2px solid #ffffff;
+  border: 2px solid #fff;
   border-radius: 50%;
+  transform: translate(-50%, 0); /* ✅ Keeps it centered */
   z-index: 2;
 }
 
@@ -81,7 +75,6 @@
   font-size: 1.1rem;
   font-weight: 600;
   margin: 0;
-  
 }
 
 .subtitle {
@@ -101,9 +94,9 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 2px solid #ffffff;
+  border: 2px solid #fff;
   background: #111;
-  color: #ffffff;
+  color: #fff;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
@@ -112,7 +105,7 @@
 }
 
 .toggle-btn:hover {
-  background: #ffffff;
+  background: #fff;
   color: #000;
 }
 
@@ -121,7 +114,7 @@
   background: #1a1a1a;
   margin-top: 10px;
   padding: 15px 18px;
-  border-left: 4px solid #ffffff;
+  border-left: 4px solid #fff;
   border-radius: 6px;
   color: #eaeaea;
   font-size: 0.95rem;
@@ -133,8 +126,8 @@
 .certificate-btn {
   display: inline-block;
   margin-top: 10px;
-  background: #ffffff;
-  color: #000000;
+  background: #fff;
+  color: #000;
   padding: 8px 16px;
   border-radius: 5px;
   text-decoration: none;
@@ -150,7 +143,7 @@
   transform: translateY(-2px);
 }
 
-/* Modal Styles */
+/* Modal */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -186,7 +179,7 @@
   position: absolute;
   top: 10px;
   right: 15px;
-  background: #ffffff;
+  background: #fff;
   color: #000;
   border: none;
   border-radius: 50%;
@@ -201,6 +194,9 @@
   background: #e5e5e5;
 }
 
+/* =========================
+   ✅ RESPONSIVE FIXES
+   ========================= */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -212,7 +208,7 @@
   }
 }
 
-/* Responsive */
+/* ✅ Responsive Fixes for all phones */
 @media (max-width: 900px) {
   .resume-container {
     flex-direction: column;
@@ -226,10 +222,45 @@
   }
 
   .timeline {
-    margin-left: 20px;
+    border-left: 2px solid #000;
+    margin-left: 15px;
+    padding-left: 25px;
   }
 
   .timeline-item::before {
-    left: -30px;
+    left: -1px; /* keep perfectly on line */
+    transform: translate(-50%, 0);
+  }
+
+  .timeline-header {
+    flex-wrap: wrap;
+  }
+}
+
+/* ✅ Extra small phones like Redmi 13C */
+@media (max-width: 480px) {
+  .timeline {
+    margin-left: 12px;
+    padding-left: 22px;
+  }
+
+  .timeline-item::before {
+    left: 0;
+    transform: translate(-50%, 0);
+  }
+
+  .timeline-header h4 {
+    font-size: 1rem;
+  }
+
+  .subtitle,
+  .year {
+    font-size: 0.85rem;
+  }
+
+  .toggle-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
   }
 }
