@@ -10,10 +10,10 @@ export const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_rx1dp2s",  // ✅ Your EmailJS Service ID
-        "template_szie6vr", // ✅ Your EmailJS Template ID
+        "service_rx1dp2s",  //  Your EmailJS Service ID
+        "template_szie6vr", //  Your EmailJS Template ID
         formRef.current,
-        "BwU6hsFQNa3dElXwH" // ✅ Your EmailJS Public Key
+        "BwU6hsFQNa3dElXwH" //  Your EmailJS Public Key
       )
       .then(
         () => {
@@ -41,28 +41,23 @@ export const Contact = () => {
             <div className={styles.icon}>📍</div>
             <div>
               <h4>Address</h4>
-              <p>North Tower, Toronto, Canada</p>
-            </div>
-          </div>
-          <div className={styles.infoItem}>
-            <div className={styles.icon}>💼</div>
-            <div>
-              <h4>Freelance</h4>
-              <p>Available Right Now</p>
+              <p>23 A North kamarajar colony,
+                Mannachanallur,Trichy-621005.
+              </p>
             </div>
           </div>
           <div className={styles.infoItem}>
             <div className={styles.icon}>✉️</div>
             <div>
               <h4>Email</h4>
-              <p>zoe.miller@email.com</p>
+              <p>baishwarya357@gmail.com</p>
             </div>
           </div>
           <div className={styles.infoItem}>
             <div className={styles.icon}>📞</div>
             <div>
               <h4>Phone</h4>
-              <p>+1 900 900 9000</p>
+              <p>+91 936 132 3273</p>
             </div>
           </div>
         </div>

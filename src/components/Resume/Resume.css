@@ -1,5 +1,5 @@
 .resume-section {
-  background: linear-gradient(to bottom right, #fff, #fff);
+  background: linear-gradient(to bottom right, #ffff, #fff);
   padding: 80px 10%;
   font-family: "Poppins", sans-serif;
   color: #000;
@@ -35,14 +35,21 @@
   text-align: left;
 }
 
-/* =========================
-   ✅ TIMELINE FIXED SECTION
-   ========================= */
+.column-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0000;
+  border-bottom: 2px solid #0000;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+/* Timeline */
 .timeline {
   position: relative;
-  margin-left: 20px;
-  border-left: 2px solid #000;
-  padding-left: 25px;
+  margin-left: 26px;
+  border-left: 1px solid #000;
+  padding-left: 26px;
 }
 
 .timeline-item {
@@ -53,14 +60,13 @@
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: -8px; /* Center dot perfectly on the line */
-  top: 0.55em;
-  width: 14px;
-  height: 14px;
+  left: -33px;
+  top: 6px;
+  width: 13px;
+  height: 13px;
   background: #111;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  transform: translate(-50%, 0); /* ✅ Keeps it centered */
+  border: 0px solid #ffffff;
+  border-radius: 90%;
   z-index: 2;
 }
 
@@ -73,8 +79,9 @@
 
 .timeline-header h4 {
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 550;
   margin: 0;
+  
 }
 
 .subtitle {
@@ -94,9 +101,9 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 2px solid #ffffff;
   background: #111;
-  color: #fff;
+  color: #ffffff;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
@@ -105,7 +112,7 @@
 }
 
 .toggle-btn:hover {
-  background: #fff;
+  background: #ffffff;
   color: #000;
 }
 
@@ -114,7 +121,7 @@
   background: #1a1a1a;
   margin-top: 10px;
   padding: 15px 18px;
-  border-left: 4px solid #fff;
+  border-left: 4px solid #ffffff;
   border-radius: 6px;
   color: #eaeaea;
   font-size: 0.95rem;
@@ -126,8 +133,8 @@
 .certificate-btn {
   display: inline-block;
   margin-top: 10px;
-  background: #fff;
-  color: #000;
+  background: #ffffff;
+  color: #000000;
   padding: 8px 16px;
   border-radius: 5px;
   text-decoration: none;
@@ -143,14 +150,14 @@
   transform: translateY(-2px);
 }
 
-/* Modal */
+/* Modal Styles */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(237, 235, 235, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -160,7 +167,7 @@
 
 .modal-content {
   position: relative;
-  background: #111;
+  background: #ece7e7;
   border-radius: 10px;
   padding: 20px;
   max-width: 90%;
@@ -179,7 +186,7 @@
   position: absolute;
   top: 10px;
   right: 15px;
-  background: #fff;
+  background: #ffffff;
   color: #000;
   border: none;
   border-radius: 50%;
@@ -194,9 +201,6 @@
   background: #e5e5e5;
 }
 
-/* =========================
-   ✅ RESPONSIVE FIXES
-   ========================= */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -208,59 +212,29 @@
   }
 }
 
-/* ✅ Responsive Fixes for all phones */
+/* Responsive */
 @media (max-width: 900px) {
   .resume-container {
     flex-direction: column;
     align-items: center;
-    gap: 60px;
+    gap: 30px;
   }
 
   .column {
     width: 100%;
-    max-width: 600px;
+    max-width: 350px;
   }
 
   .timeline {
-    border-left: 2px solid #000;
-    margin-left: 15px;
-    padding-left: 25px;
+    margin-left: 10px;
   }
+  
 
   .timeline-item::before {
-    left: -1px; /* keep perfectly on line */
-    transform: translate(-50%, 0);
+    left: -33px;
   }
 
-  .timeline-header {
-    flex-wrap: wrap;
-  }
+
+
 }
 
-/* ✅ Extra small phones like Redmi 13C */
-@media (max-width: 480px) {
-  .timeline {
-    margin-left: 12px;
-    padding-left: 22px;
-  }
-
-  .timeline-item::before {
-    left: 0;
-    transform: translate(-50%, 0);
-  }
-
-  .timeline-header h4 {
-    font-size: 1rem;
-  }
-
-  .subtitle,
-  .year {
-    font-size: 0.85rem;
-  }
-
-  .toggle-btn {
-    width: 28px;
-    height: 28px;
-    font-size: 16px;
-  }
-}

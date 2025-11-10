@@ -3,7 +3,7 @@ import "./Resume.css";
 
 const Resume = () => {
   const [activeIndex, setActiveIndex] = useState(null);
-  const [selectedCertificate, setSelectedCertificate] = useState(null); // For popup modal
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
 
   const toggle = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -66,7 +66,7 @@ const Resume = () => {
       <p className="resume-subtitle">Skills & Internship</p>
 
       <div className="resume-container">
-        {/* Left Column — Skills */}
+        {/* Skills Column */}
         <div className="column">
           <h3 className="column-title">Skills</h3>
           <div className="timeline">
@@ -96,7 +96,7 @@ const Resume = () => {
           </div>
         </div>
 
-        {/* Right Column — Internship */}
+        {/* Internship Column */}
         <div className="column">
           <h3 className="column-title">Internship</h3>
           <div className="timeline">
@@ -122,7 +122,9 @@ const Resume = () => {
                     {item.certificate && (
                       <button
                         className="certificate-btn"
-                        onClick={() => setSelectedCertificate(item.certificate)}
+                        onClick={() =>
+                          setSelectedCertificate(item.certificate)
+                        }
                       >
                         🎓 View Certificate
                       </button>
@@ -135,10 +137,16 @@ const Resume = () => {
         </div>
       </div>
 
-      {/* ✅ Certificate Popup Modal */}
+      {/* Certificate Modal */}
       {selectedCertificate && (
-        <div className="modal-overlay" onClick={() => setSelectedCertificate(null)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <div
+          className="modal-overlay"
+          onClick={() => setSelectedCertificate(null)}
+        >
+          <div
+            className="modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
             <img
               src={selectedCertificate}
               alt="Certificate"
