@@ -9,7 +9,7 @@ const Chatbot = () => {
   const [input, setInput] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
-  // 🧠 Load chat from localStorage on mount
+  // Load chat from localStorage on mount
   useEffect(() => {
     const savedMessages = localStorage.getItem("chatMessages");
     if (savedMessages) {
@@ -19,7 +19,7 @@ const Chatbot = () => {
     }
   }, []);
 
-  // 💾 Save chat whenever messages change
+  //  Save chat whenever messages change
   useEffect(() => {
     localStorage.setItem("chatMessages", JSON.stringify(messages));
   }, [messages]);

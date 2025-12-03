@@ -19,7 +19,7 @@ export const Navbar = () => {
 
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
-      <div className={styles.logo}>Aishwarya.</div>
+      <div className={styles.logo}>Aishwarya</div>
 
       {/* Desktop Navigation Links */}
       <ul className={styles.navLinks}>

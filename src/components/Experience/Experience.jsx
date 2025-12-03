@@ -9,12 +9,12 @@ export const Experience = () => {
   const trackRef = useRef(null);
 
   const skills = [
-    { id: 1, title: "HTML", level: 95, iconClass: "devicon-html5-plain colored", certificate: "/certificates/html.jpg" },
-    { id: 2, title: "CSS", level: 90, iconClass: "devicon-css3-plain colored", certificate: "/certificates/css.jpg" },
-    { id: 3, title: "JavaScript", level: 88, iconClass: "devicon-javascript-plain colored", certificate: "/certificates/javascript.jpg" },
-    { id: 4, title: "React", level: 85, iconClass: "devicon-react-original colored", certificate: "/certificates/react.jpg" },
-    { id: 5, title: "GitHub", level: 80, iconClass: "devicon-github-original", certificate: "/certificates/github.jpg" },
-    { id: 6, title: "MongoDB", level: 75, iconClass: "devicon-mongodb-plain colored", certificate: "/certificates/mongodb.jpg" },
+    { id: 1, title: "HTML", level: 80, iconClass: "devicon-html5-plain colored", certificate: "/certificates/html.jpg" },
+    { id: 2, title: "CSS", level: 80, iconClass: "devicon-css3-plain colored", certificate: "/certificates/css.jpg" },
+    { id: 3, title: "JavaScript", level: 75, iconClass: "devicon-javascript-plain colored", certificate: "/certificates/javascript.jpg" },
+    { id: 4, title: "React", level: 75, iconClass: "devicon-react-original colored", certificate: "/certificates/react.jpg" },
+    { id: 5, title: "GitHub", level: 90, iconClass: "devicon-github-original", certificate: "/certificates/github.jpg" },
+    { id: 6, title: "MongoDB", level: 70, iconClass: "devicon-mongodb-plain colored", certificate: "/certificates/mongodb.jpg" },
   ];
 
   // Infinite scrolling
